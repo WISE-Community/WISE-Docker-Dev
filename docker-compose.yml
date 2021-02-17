@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+
+  wise-redis:
+    image: redis
+
+  wise-mysql:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=iamroot
+
+  wise-api:
+    image: wise-api-dev:latest
+    depends_on:
+      - wise-redis
+      - wise-mysql
+    ports:
+      - "8080:8080"
+    volumes:
+      - "${PWD}/WISE-API:/app"
+
+  wise-client:
+    image: wise-client-dev:latest
+    depends_on:
+      - wise-api
+    ports:
+      - "4200:4200"
+    volumes:
+      - "${PWD}/WISE-Client:/app"
+
+  wise-nginx:
+    image: nginx:1.13
+    depends_on:
+      - wise-client
+    ports:
+      - "81:80"
+    volumes:
+      - "${PWD}/nginx/conf.d:/etc/nginx/conf.d"
