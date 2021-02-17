@@ -11,7 +11,7 @@ services:
       - MYSQL_ROOT_PASSWORD=iamroot
 
   wise-api:
-    image: wise-api-dev:latest
+    image: wiseberkeley/wise-api-dev:v1
     depends_on:
       - wise-redis
       - wise-mysql
@@ -21,7 +21,7 @@ services:
       - "${PWD}/WISE-API:/app"
 
   wise-client:
-    image: wise-client-dev:latest
+    image: wiseberkeley/wise-client-dev:v1
     depends_on:
       - wise-api
     ports:
