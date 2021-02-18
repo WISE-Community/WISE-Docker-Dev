@@ -9,6 +9,8 @@ services:
     image: mysql:8
     environment:
       - MYSQL_ROOT_PASSWORD=iamroot
+    volumes:
+      - "${PWD}/data:/var/lib/mysql"
 
   wise-api:
     image: wiseberkeley/wise-api-dev:v1
