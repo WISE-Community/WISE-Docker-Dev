@@ -9,7 +9,11 @@ services:
     image: mysql:8
     environment:
       - MYSQL_ROOT_PASSWORD=iamroot
+      - MYSQL_DATABASE=wise_database
+      - MYSQL_USER=wiseuser
+      - MYSQL_PASSWORD=wisepass
     volumes:
+      - "${PWD}/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
       - "${PWD}/data:/var/lib/mysql"
 
   wise-api:
