@@ -13,8 +13,8 @@ services:
       - MYSQL_USER=wiseuser
       - MYSQL_PASSWORD=wisepass
     volumes:
-      - "${PWD}/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
-      - "${PWD}/data:/var/lib/mysql"
+      - "./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
+      - "./data:/var/lib/mysql"
 
   wise-api:
     image: wiseberkeley/wise-api-dev:v1
@@ -24,7 +24,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - "${PWD}/WISE-API:/app"
+      - "../WISE-API:/app"
 
   wise-client:
     image: wiseberkeley/wise-client-dev:v1
@@ -33,7 +33,7 @@ services:
     ports:
       - "4200:4200"
     volumes:
-      - "${PWD}/WISE-Client:/app"
+      - "../WISE-Client/src:/app/src"
 
   wise-nginx:
     image: nginx:1.13
