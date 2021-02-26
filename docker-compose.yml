@@ -27,7 +27,7 @@ services:
       - "../WISE-API:/app"
 
   wise-client:
-    image: wiseberkeley/wise-client-dev:v1
+    image: wiseberkeley/wise-client-dev:v2
     depends_on:
       - wise-api
     ports:
