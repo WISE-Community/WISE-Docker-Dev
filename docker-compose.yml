@@ -29,7 +29,7 @@ services:
       - '../WISE-API:/app'
 
   wise-client:
-    image: wiseberkeley/wise-client-dev:v3
+    image: wiseberkeley/wise-client-dev:v4
     container_name: wise-client
     depends_on:
       - wise-api
