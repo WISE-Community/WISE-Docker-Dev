@@ -69,3 +69,14 @@ $ docker exec -i wise-mysql sh -c 'exec mysql wise_database -uroot -p"$MYSQL_ROO
 ```
 $ docker exec -i wise-mysql sh -c 'exec mysqldump wise_database -uroot -p"$MYSQL_ROOT_PASSWORD"' > wise_database_dump.sql
 ```
+
+# Resources
+
+Open-source license: GNU General Public License, v3.  See LICENSE.txt for details.
+
+To see WISE in action and for inquiry science curricula developed by the WISE research team at UC Berkeley, visit https://wise.berkeley.edu.
+
+Developer discussions: https://github.com/WISE-Community/WISE-Client/discussions
+
+General WISE discussions: https://wise-discuss.berkeley.edu/
+
