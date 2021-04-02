@@ -1,7 +1,7 @@
 # WISE-Docker-Dev
 
 ## Description
-WISE development is done using [Docker](https://www.docker.com/). Using Docker simplifies and standardizes the development environment so that we can focus more on developing features.
+WISE development uses [Docker](https://www.docker.com/). Using Docker simplifies and standardizes the development environment so that developers can quickly and easily start developing WISE.
 
 ## Setup
 1. Install Docker from [here](https://www.docker.com/products/docker-desktop).
