@@ -49,9 +49,9 @@ $ docker exec -it wise-client npm test
 ```
 6. Run 'npm test' in wise-client container with the watch option
 ```
-$ docker exec -it wise-client npm test -- “--watch=true”
+$ docker exec -it wise-client npm test -- "--watch=true"
 ```
-7. Run ‘maven test’ in wise-api container
+7. Run 'maven test' in wise-api container
 ```
 $ docker exec -it wise-api mvn test
 ```
