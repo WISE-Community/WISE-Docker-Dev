@@ -6,6 +6,7 @@ services:
     container_name: wise-redis
 
   wise-mysql:
+    platform: linux/x86_64
     image: mysql:8
     container_name: wise-mysql
     environment:
@@ -18,7 +19,7 @@ services:
       - './data:/var/lib/mysql'
 
   wise-api:
-    image: wiseberkeley/wise-api-dev:v1
+    image: wiseberkeley/wise-api-dev:v2
     container_name: wise-api
     expose:
       - '5005'
