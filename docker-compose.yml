@@ -34,7 +34,7 @@ services:
     command: mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005" -Dspring-boot.run.profiles=dockerdev
 
   wise-client:
-    image: wiseberkeley/wise-client-dev:v5
+    image: wiseberkeley/wise-client-dev:v6
     container_name: wise-client
     depends_on:
       - wise-api
