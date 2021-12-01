@@ -19,7 +19,7 @@ services:
       - './data:/var/lib/mysql'
 
   wise-api:
-    image: wiseberkeley/wise-api-dev:v2
+    image: wiseberkeley/wise-api-dev:latest
     container_name: wise-api
     expose:
       - '5005'
@@ -34,7 +34,7 @@ services:
     command: mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005" -Dspring-boot.run.profiles=dockerdev
 
   wise-client:
-    image: wiseberkeley/wise-client-dev:v6
+    image: wiseberkeley/wise-client-dev:latest
     container_name: wise-client
     depends_on:
       - wise-api
