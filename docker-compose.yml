@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   wise-redis:
-    image: redis
+    image: redis:6.2
     container_name: wise-redis
 
   wise-mysql:
@@ -44,7 +44,7 @@ services:
       - '../WISE-Client:/app'
 
   wise-nginx:
-    image: nginx:1.13
+    image: nginx:1.22
     container_name: wise-nginx
     depends_on:
       - wise-client
