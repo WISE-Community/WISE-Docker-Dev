@@ -31,7 +31,9 @@ services:
       - '8080:8080'
     volumes:
       - '../WISE-API:/app'
-    command: mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005" -Dspring-boot.run.profiles=dockerdev
+    command: >
+      bash -c '/app/create-application-dockerdev-properties-if-necessary.sh &&
+      mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:5005" -Dspring-boot.run.profiles=dockerdev'
 
   wise-client:
     image: wiseberkeley/wise-client-dev:latest
