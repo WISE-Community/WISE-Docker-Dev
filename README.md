@@ -15,12 +15,17 @@ WISE-Docker-Dev
 WISE-API
 WISE-Client
 ```
-3. Run ```docker compose up``` in the WISE-Docker-Dev directory
+3. Run ```npm install``` in the WISE-Client directory
 ```
-$ cd WISE-Docker-Dev
+$ cd WISE-Client
+WISE-Client $ npm install
+```
+4. Run ```docker compose up``` in the WISE-Docker-Dev directory
+```
+WISE-Client $ cd ../WISE-Docker-Dev
 WISE-Docker-Dev $ docker compose up
 ```
-4. Wait for everything to download, compile, and start. This can take a while depending on your computer and connection speeds. When you see this in the output, all of the application has started:
+5. Wait for everything to download, compile, and start. This can take a while depending on your computer and connection speeds. When you see this in the output, all of the application has started:
 ```
 ...
 wise-client  | ** Angular Live Development Server is listening on 0.0.0.0:4200, open your browser on http://localhost:4200/ **
@@ -28,8 +33,8 @@ wise-client  |
 wise-client  | 
 wise-client  | ✔ Compiled successfully.
 ```
-5. When you see the above output in your log output, WISE will be running at http://localhost:81. Go there with your browser to load the WISE homepage.
-6. Log in with admin/pass, or previewuser/wise.
+6. When you see the above output in your log output, WISE will be running at http://localhost:81. Go there with your browser to load the WISE homepage.
+7. Log in with admin/pass, or previewuser/wise.
 
 Any changes that you make to the source code will be automatically compiled and reloaded in the browser. 
 
