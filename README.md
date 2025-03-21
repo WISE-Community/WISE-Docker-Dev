@@ -5,7 +5,7 @@ WISE development uses [Docker](https://www.docker.com/). Using Docker simplifies
 
 ## Requirements
 1. Your machine will need at least 10GB to set up WISE development using Docker.
-2. If you are using Windows, It may be easier to use WSL2. Update .wslconfig to allocate at least 10GB to WSL.
+2. If you are using Windows, It may be easier to use WSL2. Update .wslconfig to allocate at least 10GB to WSL. ([reference](https://learn.microsoft.com/en-us/windows/wsl/wsl-config))
 
 ## Setup
 1. Install Docker from [here](https://www.docker.com/products/docker-desktop).  In the Docker preferences, set the RAM to at least 6GB.
