@@ -45,12 +45,25 @@ services:
     volumes:
       - '../WISE-Client:/app'
 
+  wise-client-test:
+    image: wiseberkeley/wise-client-dev:latest
+    container_name: wise-client-test
+    command: npm test -- --source-map=true --watch=true
+    expose:
+      - '9876'
+    ports:
+      - '9876:9876'
+    volumes:
+      - '../WISE-Client:/app'
+    profiles:
+      - wise-client-test
+
   wise-nginx:
     image: nginx:1.26
     container_name: wise-nginx
     depends_on:
       - wise-client
     ports:
-      - '81:80'
+      - '80:80'
     volumes:
       - '${PWD}/nginx/conf.d:/etc/nginx/conf.d'
