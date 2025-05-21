@@ -58,6 +58,15 @@ services:
     profiles:
       - wise-client-test
 
+  wise-client-build-prod:
+    image: wiseberkeley/wise-client-dev:latest
+    container_name: wise-client-build-prod
+    command: npm run build-prod
+    volumes:
+      - '../WISE-Client:/app'
+    profiles:
+      - wise-client-build-prod
+
   wise-nginx:
     image: nginx:1.26
     container_name: wise-nginx
