@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   wise-redis:
-    image: redis:6.2
+    image: redis:7
     container_name: wise-redis
 
   wise-mysql:
