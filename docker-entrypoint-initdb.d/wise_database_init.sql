@@ -439,7 +439,6 @@ create table student_attendance (
 create table student_user_details (
     accountanswer varchar(255),
     accountquestion varchar(255),
-    birthday datetime not null,
     firstname varchar(255) not null,
     gender integer not null,
     lastlogintime datetime,
