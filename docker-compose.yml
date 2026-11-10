@@ -15,7 +15,6 @@ services:
       - MYSQL_USER=wiseuser
       - MYSQL_PASSWORD=wisepass
     volumes:
-      - './docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d'
       - './data:/var/lib/mysql'
 
   wise-api:
